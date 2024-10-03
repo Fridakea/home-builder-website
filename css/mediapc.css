@@ -1,0 +1,125 @@
+@media (min-width: 600px) {
+    h1 {
+    margin: var(--theme-spacing) 0 var(--theme-spacing) 0;
+    font-size: 4rem;
+    }
+
+    h2 {
+        margin: calc(var(--theme-spacing) / 2) 0 calc(var(--theme-spacing) / 2) 0;
+        font-size: 2rem;
+    }
+
+    h3 {
+        margin: calc(var(--theme-spacing) / 3) 0 calc(var(--theme-spacing) / 3) 0;
+    }
+
+    header a {
+        font-size: 1.7rem;
+        padding: 10px 30px 10px 30px;
+    }
+
+    /* Forsiden */
+    .cards {
+        flex-direction: row;
+
+        & .card {
+            height: 100%;
+
+            & p {
+                display: -webkit-box;
+                height: 135px;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 5;
+                overflow: hidden;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    /* Grafik */
+    .margin-bottom div {
+        padding-bottom: 0px;
+    }
+
+    /* Assets */
+    .assets-flex {
+        display: flex;
+        gap: 50px;
+
+        & div {
+            flex: 1;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    /* Flex og grid kun i PC wiew */
+    .flex-row-pc {
+        display: flex;
+        flex-direction: row;
+        gap: 75px;
+
+        & img, div {
+            flex: 1;
+            max-width: 50%;
+        }
+    }
+
+    .teknik-img {
+        max-width: 80%!important;
+    }
+
+    .flex-row-grafik {
+        display: flex;
+        gap: 50px;
+
+        & img, div {
+            flex: 1;
+            width: 50%;
+        }
+
+        & img {
+            max-height: 400px;
+        }
+    }
+
+    .flex-row-grafik-reverse {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 50px;
+
+        & img, div {
+            flex: 1;
+            width: 50%;
+        }
+
+        & img {
+            max-height: 400px;
+        }
+    }
+
+    .yellow-brick-button {
+        width: 8cqw;
+        font-size: 2.4cqw;
+    }
+    
+    .grey-brick-button {
+        width: 11cqw;
+        font-size: 2.3cqw;
+    }
+
+}
+
+@media (min-width: 1200px){
+    header a {
+        font-size: 2rem;
+        padding: 10px 70px 10px 70px;
+    }
+
+    .cards .card{
+        & p{
+            height: 80px;
+            -webkit-line-clamp: 3;
+        }
+    }
+}

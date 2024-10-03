@@ -1,0 +1,211 @@
+.fall {
+  animation-name: fall_kf;
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes fall_kf {
+  0% {
+    transform: translateY(-140%);
+  }
+  
+  100% {
+    transform: translateY(550%);
+  }
+}
+
+.freeze {
+  animation-play-state: paused;
+}
+
+.fade-out {
+  animation-name: fade-out_kf;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes fade-out_kf {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+.shake {
+  animation: shake_kf 1s linear both;
+}
+
+.break-window {
+  animation: break-window_kf 1s, shake_kf 1s;
+}
+
+@keyframes shake_kf {
+  0% {
+    transform: rotate(45deg);
+  }
+  7.5% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(-45deg);
+  }
+  22.5% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(30deg);
+  }
+  37.5% {
+    transform: rotate(0deg);
+  }
+  45% {
+    transform: rotate(-30deg);
+  }
+  52.5% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(15deg);
+  }
+  67.5% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes break-window_kf {
+  0% {
+    background-image: url('../svg/vindue-animation.svg');
+    scale: 2;
+  }
+  100% {
+    background-image: url('../svg/vindue-animation.svg');
+    scale: 2;
+  }
+}
+
+.bounce {
+  animation-name: bounce_kf;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes bounce_kf {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.bounce-once {
+  animation-name: bounce-once_kf;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes bounce-once_kf {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.07;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.time-animation {
+  animation-name: time-animation_kf;
+  animation-duration: 20s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes time-animation_kf {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+/* Mine tilfædlige variabler */
+.pos1 {
+  left: 2%;
+}
+.pos2 {
+  left: 19%;
+}
+.pos3 {
+  left: 36%;
+}
+.pos4 {
+  left: 53%;
+}
+.pos5 {
+  left: 70%;
+}
+.pos6 {
+  left: 87%;
+}
+.pos7 {
+  left: 92%;
+}
+.delay1 {
+  animation-delay: 1s;
+}
+.delay2 {
+  animation-delay: 1.5s;
+}
+.delay3 {
+  animation-delay: 2s;
+}
+.delay4 {
+  animation-delay: 2.5s;
+}
+.delay5 {
+  animation-delay: 3s;
+}
+.delay6 {
+  animation-delay: 3.5s;
+}
+.speed1 {
+  animation-duration: 1s;
+}
+.speed2 {
+  animation-duration: 1.2s;
+}
+.speed3 {
+  animation-duration: 1.4s;
+}
+.speed4 {
+  animation-duration: 1.75s;
+}
+.speed5 {
+  animation-duration: 2s;
+}
+.speed6 {
+  animation-duration: 2.2s;
+}

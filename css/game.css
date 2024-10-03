@@ -1,0 +1,245 @@
+@import url(animations.css);
+
+/* Spillets id'er*/
+#screen {
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+}
+
+#game, #start, #game_over, #level_complete, #game_background, #game_elements, #game_foreground, #game_ui {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#start {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-image: url("../svg/startskaerm.svg");
+}
+
+#start.hide, #game_over.hide, #level_complete.hide {
+    display: none;
+}
+
+#game_over, #level_complete {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+#game_over {
+    background-image: url("../svg/game-over.svg");
+}
+
+#level_complete {
+    background-image: url("../svg/level-complete.svg");
+}
+
+.screen-style {
+    position: absolute;
+    width: 50%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+
+    & div {
+        padding: 30px;
+        font-family:  Fira Sans Extra Condensed, sans-serif;
+        font-weight: bold;
+        font-size: 3cqw;
+        text-align: center;
+    }
+}
+
+.start-screen {
+    & div {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    & .yellow-brick-button {
+        opacity: 1;
+        width: 13cqw;
+        font-size: 3.7vw;
+    }
+    
+    & .yellow-brick-button:hover {
+        scale: 1;
+        color: black;
+    }
+}
+
+.end-screen {
+    margin-top: 10%;
+
+    & div {
+        color: black;
+    }
+
+    & #try-again-button {
+        background-image: url("../svg/provigen-knap.svg");
+        aspect-ratio: 52 / 15.5;
+        width: 18cqw;
+        font-size: 3.4cqw;
+        color: black;
+    }
+
+    & #play-again-button {
+        background-image: url("../svg/spil-igen-knap.svg");
+        aspect-ratio: 52 / 15.5;
+        width: 18cqw;
+        font-size: 3.4cqw;
+        color: black;
+    }
+
+    & .menu-button {
+        background-image: url("../svg/graa-musten.svg");
+        aspect-ratio: 4 / 1.5;
+        width: 11.8cqw;
+        font-size: 3.5cqw;
+        color: black;
+    }
+}
+
+#game_background {
+    background-image: url("../svg/baggrund.svg");
+    background-size: cover;
+    z-index: -3;
+}
+
+#game_elements {
+    overflow: hidden;
+}
+
+#game_foreground {
+    z-index: -2;
+}
+
+#game_ui {
+    z-index: -1;
+}
+
+/* Spil UI elementer */
+#start_button {
+    height: 100px;
+    top: 60%;
+    left: 40%;
+}
+
+/*#info_button {
+    width: 100%;
+    height: 100%;
+    top: 10%;
+    left: 80%;
+    aspect-ratio: 21 / 21;
+    background-image: url("../svg/info-knap.svg");
+}*/
+
+#skilt {
+    width: 10%;
+    aspect-ratio: 120 / 440;
+    position: absolute;
+    background-image: url("../svg/point-og-tid-skilt.svg");
+    background-size: cover;
+
+    top: 31%;
+    left: 3%;
+}
+
+#score_board {
+    position: absolute;
+    width: 76%;
+    aspect-ratio: 1/1;
+    top: 0%;
+    left: 12%;
+    
+    display: flex;
+}
+
+#score {
+    font-size: 6vw;
+    font-family: myDigitalFont;
+}
+
+
+#time_board {
+    position: absolute;
+    width: 60%;
+    aspect-ratio: 1/1;
+    top: 29%;
+    left: 20%;
+
+    display: flex;
+}
+
+#time {
+    font-size: 4.3vw;
+    font-family: myDigitalFont;
+    color: #39B54A;
+}
+
+#life_board {
+    position: absolute;
+    width: 5.5%;
+    aspect-ratio: 65 / 520;
+    background-size: cover;
+    top: 8.5%;
+    left: 1.5%;
+    z-index: -1;
+}
+
+#life_board.hearts_3 {
+    background-image: url("../svg/3-liv-skilt.svg");
+}
+
+#life_board.hearts_2 {
+    background-image: url("../svg/2-liv-skilt.svg");
+}
+
+#life_board.hearts_1 {
+    background-image: url("../svg/1-liv-skilt.svg");
+}
+
+#house {
+    position: absolute;
+    width: 15%;
+    aspect-ratio: 34 / 50;
+    background-size: cover;
+    top: 56%;
+    left: 82%;
+    background-image: url("../svg/hus.svg");
+    z-index: 2;
+}
+
+/* Spil elementer */
+#window_container, #window_container1, #window_container2 {
+    width: 7%;
+    aspect-ratio: 1.84/2.55;
+    position: absolute;
+    top: 0;
+}
+
+#window_sprite, #window_sprite1, #window_sprite2 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../svg/vindu-god.svg");
+    background-size: cover;
+}
+
+#window_broken_container, #window_broken_container1, #window_broken_container2 {
+    width: 7%;
+    aspect-ratio: 1.85/2.50;
+    position: absolute;
+    top: 0%;
+}
+
+#window_broken_sprite, #window_broken_sprite1, #window_broken_sprite2 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../svg/vindu-daarlig.svg");
+    background-size: cover;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spil</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/mediapc.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <a href="spil.html">Spillet</a>
+        <a href="grafik.html">Grafik</a>
+        <a href="teknik.html">Teknik</a>
+        <a href="assets.html">Assets</a>
+    </header>
+    <div id="screen">
+        <div id="game">
+            <div id="game_background"></div>
+            <div id="game_elements">
+                <div id="window_broken_container">
+                    <div id="window_broken_sprite"></div>
+                </div>
+                <div id="window_container">
+                    <div id="window_sprite"></div>
+                </div>
+                <div id="window_broken_container1">
+                    <div id="window_broken_sprite1"></div>
+                </div>
+                <div id="window_container1">
+                    <div id="window_sprite1"></div>
+                </div>
+                <div id="window_broken_container2">
+                    <div id="window_broken_sprite2"></div>
+                </div>
+                <div id="window_container2">
+                    <div id="window_sprite2"></div>
+                </div>
+            </div>
+            <div id="game_foreground"></div>
+            <div id="game_ui">
+                <div id="house"></div>
+                <div id="skilt">
+                    <div id="score_board">
+                        <p id="score">0</p>
+                    </div>
+                    <div id="time_board">
+                        <div id="time">20</div>
+                    </div>
+                </div>
+                <div class="hearts_3" id="life_board"></div>
+            </div>
+        </div>
+        <div id="start">
+            <div class="screen-style start-screen">
+                <div id="start_txt">Byg dit hus ved at vælge de hele byggematerialer og undgå de ødelagte
+                    byggematerialer</div>
+                <button class="brick-button yellow-brick-button" id="start_button">START</button>
+                <!--<button class="brick-button" id="info_button"></button>-->
+            </div>
+        </div>
+        <div id="game_over">
+            <div class="screen-style end-screen">
+                <div id="game-over-point"></div>
+                <button class="brick-button" id="try-again-button">Prøv igen</button>
+                <button onclick="window.location.href = 'index.html'" class="brick-button menu-button">Menu</button>
+            </div>
+        </div>
+        <div id="level_complete">
+            <div class="screen-style end-screen">
+                <div id="level-complete-point"></div>
+                <button class="brick-button" id="play-again-button">Spil igen</button>
+                <button onclick="window.location.href = 'index.html'" class="brick-button menu-button">Menu</button>
+            </div>
+        </div>
+    </div>
+    <audio class="hide" id="audio_hammer" src="audio/hammer_build.wav" controls></audio>
+    <audio class="hide" id="audio_saw" src="audio/sawing_wood.wav" controls></audio>
+    <audio class="hide" id="audio_glass_break1" src="audio/glass_break.wav" controls></audio>
+    <audio class="hide" id="audio_glass_break2" src="audio/glass_break2.wav" controls></audio>
+    <audio class="hide" id="audio_loose" src="audio/building_collapse.wav" controls></audio>
+    <audio class="hide" id="audio_win" src="audio/win.wav" controls></audio>
+    <script src="animations.js"></script>
+</body>
+
+</html>
